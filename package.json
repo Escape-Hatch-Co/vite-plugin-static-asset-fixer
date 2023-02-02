@@ -6,11 +6,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/escape-hatch-co/vite-plugin-static-asset-fixer.git"
+    "url": "git+https://github.com/escape-hatch-co/vite-plugin-static-asset-fixer.git"
   },
-  "keywords": [ "vite", "plugin" ],
+  "keywords": [
+    "vite",
+    "plugin"
+  ],
   "author": "Escape Hatch <dev@escapehatch.com>",
   "license": "MIT",
   "description": "Vite plugin to update assets paths when in dev mode.",
-  "homepage": "https://github.com/escape-hatch-co/vite-plugin-static-asset-fixer"
+  "homepage": "https://github.com/escape-hatch-co/vite-plugin-static-asset-fixer",
+  "bugs": {
+    "url": "https://github.com/escape-hatch-co/vite-plugin-static-asset-fixer/issues"
+  },
+  "main": "index.js"
 }

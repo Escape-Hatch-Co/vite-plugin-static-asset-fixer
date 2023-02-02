@@ -1,21 +1,21 @@
-export default function staticAssetFixer({
-    host = 'localhost',
+export default function staticAssetFixer(config = {}) {
+  const {
     https = true,
+    host = 'localhost',
     port = 3000,
-    dir = '',
-  }) {
-    const assetPath = `http${https ? 's' : ''}://${host}:${port}/${dir}`;
-  
-    return {
-      name: 'static-asset-fixer',
-      enforce: 'post',
-      apply: 'serve',
-      transform(src) {
-        return {
-          code: src.replace(/\.\.\/assets/g, assetPath),
-          map: null,
-        };
-      },
-    };
-  }
-  
+    dir = 'assets/',
+  } = config;
+  const assetPath = `http${https ? 's' : ''}://${host}:${port}/${dir}`;
+
+  return {
+    name: 'static-asset-fixer',
+    enforce: 'post',
+    apply: 'serve',
+    transform(src) {
+      return {
+        code: src.replace(/\.\.\/assets/g, assetPath),
+        map: null,
+      };
+    },
+  };
+}
