@@ -1,4 +1,4 @@
-export default function staticAssetFixer(config = {}) {
+function staticAssetFixer(config = {}) {
   const {
     https = true,
     host = 'localhost',
@@ -19,3 +19,5 @@ export default function staticAssetFixer(config = {}) {
     },
   };
 }
+
+module.exports = staticAssetFixer;
