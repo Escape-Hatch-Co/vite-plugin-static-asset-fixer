@@ -20,8 +20,6 @@ export default {
 
 ## Options
 
-***
-
 ### dir
 
 Type: `String`<br>
