@@ -23,7 +23,7 @@ export default {
 ### dir
 
 Type: `String`<br>
-Default: `assets/`
+Default: `assets`
 
 Local static asset directory
 
